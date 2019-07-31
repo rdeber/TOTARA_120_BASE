@@ -31,25 +31,72 @@
 //
 
 //
-// Bootstrap.
+// Fonts.
 //
-// Use Bootstrap 4 platform fonts
-@font-family-sans-serif:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-@font-family-serif:       Georgia, "Times New Roman", Times, serif;
-@font-family-monospace:   Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-@font-family-base:        @font-family-sans-serif;
+@font-family-sans-serif: Helvetica Neue, Helvetica, Arial, Liberation Sans, Roboto, Noto, sans-serif;
+@font-family-serif:      Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+@font-family-base:       @font-family-sans-serif;
+
 
 //
 // Colors.
 //
-@brand-primary: #36a5a6;
-@brand-info: #337ab7;
-@brand-success: #677b2d;
-@brand-warning: #8e660d;
-@brand-danger: #953539;
+@body-bg:              #fff;
+@text-color:           #4b4b4b;
 
-@gray-darker: #1d2125;
-@gray-dark: #3d444b;
-@gray-light: #6e6e6e;
-@gray-lighter: #dde1e5;
+@gray-darker:          #1d2125;
+@gray-dark:            #3d444b;
+@gray-light:           #6e6e6e;
+@gray-lighter:         #dde1e5;
 
+@brand-blue:           #2164f3;
+@brand-blue2:            shade(@brand-blue, 25%);
+@brand-green:          #008040;
+@brand-orange:         #ff6600;
+@brand-purple:         #551a8b;
+@brand-pink:           #cd29c0;
+@brand-yellow:         #ffb100;
+
+@brand-primary:          @brand-blue;
+@brand-secondary:        @brand-blue2;
+@brand-success:          @brand-green;
+@brand-info:             @brand-blue2;
+@brand-warning:          @brand-orange;
+@brand-danger:           @brand-purple;
+
+
+//
+// Links.
+//
+@link-color:             @brand-primary;
+@link-hover-color:       darken(@link-color, 20%);
+@link-hover-decoration:  underline;
+
+
+//
+// Headings.
+//
+@headings-font-family:   @font-family-sans-serif;
+@headings-font-weight:   700;
+@headings-line-height:   1.1;
+@headings-color:         #111;
+
+
+//
+// Box Shadows.
+//
+@indeedacademy-box-shadow-1: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+@indeedacademy-box-shadow-2: -2px 8px 22px 0 rgba(0, 0, 0, 0.15);
+@indeedacademy-box-shadow-3: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+
+
+//
+// Cubic-bezier easing.
+//
+// Standard
+@ease:     cubic-bezier(0.4, 0.0, 0.2, 1);
+// Incoming
+@ease-in:  cubic-bezier(0.0, 0.0, 0.2, 1);
+// Exiting
+@ease-out: cubic-bezier(0.4, 0.0, 1, 1);
