@@ -50,44 +50,75 @@ echo $OUTPUT->doctype() ?>
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
 <!-- Main navigation -->
-<?php
-$totara_core_renderer = $PAGE->get_renderer('totara_core');
-$hasguestlangmenu = (!isset($PAGE->layout_options['langmenu']) || $PAGE->layout_options['langmenu'] );
-$nocustommenu = !empty($PAGE->layout_options['nocustommenu']);
-echo $totara_core_renderer->masthead($hasguestlangmenu, $nocustommenu);
-?>
-
-<?php if ($full_header !== '') { ?>
-<!-- Breadcrumb and edit buttons -->
-<div class="container-fluid breadcrumb-container">
-    <div class="row">
-        <div class="col-sm-12">
-            <?php echo $full_header; ?>
-        </div>
-    </div>
-</div>
-<?php } ?>
-
-<!-- Custom Content -->
-<section>
-    <ul>
-        <li><a href="/">Link One</a></li>
-        <li><a href="/">Link Two</a></li>
-        <li><a href="/">Link Three</a></li>
-        <li><a href="/">Link Four</a></li>
-    </ul>
-    <?php echo $OUTPUT->blocks('frontpage-one', ''); ?>
-</section>
-
-<section>
-    <?php echo $OUTPUT->blocks('frontpage-two', ''); ?>
-</section>
+<?php require("{$CFG->dirroot}/theme/themebase/layout/partials/header.php"); ?>
 
 <!-- Content -->
-<div id="page" class="container-fluid">
-    <div id="page-content">
+<div id="page">
 
-        <?php echo $themerenderer->blocks_top(); ?>
+    <section class="welcome-back-block">
+        <?php echo $OUTPUT->blocks('frontpage-one', ''); ?>
+        <div>
+            <h1>Welcome back Samantha!</h1>
+            <h2>Continue this lesson:</h2>
+            <a href="/"><img src="https://via.placeholder.com/300x200.jpg?text=This+is+a+previous+lesson" /></a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </section>
+
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="#"><?php echo get_string('pillar-link-one', 'theme_themebase')?></a></li>
+        <li role="presentation"><a href="#"><?php echo get_string('pillar-link-two', 'theme_themebase')?></a></li>
+        <li role="presentation"><a href="#"><?php echo get_string('pillar-link-three', 'theme_themebase')?></a></li>
+        <li role="presentation"><a href="#"><?php echo get_string('pillar-link-four', 'theme_themebase')?></a></li>
+    </ul>
+
+    <section class="welcome-block">
+        <?php echo $OUTPUT->blocks('frontpage-two', ''); ?>
+        <div>
+            <h2>Secondary descriptive text here</h2>
+            <h1>This is an HTML block</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="/"><img src="https://via.placeholder.com/300x200.jpg?text=This+is+a+single+lesson" /></a>
+        </div>
+    </section>
+
+    <section class="mom-block">
+        <?php echo $OUTPUT->blocks('frontpage-three', ''); ?>
+        <div>
+            <h2>Featured Collection</h2>
+            <h1>Stuff your mom would want you to learn</h1>
+            <h3>2 Lessons | 3 Articles</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="lesson-wrap">
+                <a href="/">
+                    <img src="https://via.placeholder.com/150.jpg" />
+                    <h4>Lesson Title</h4>
+                </a>
+            </div>
+            <div class="lesson-wrap">
+                <a href="/">
+                    <img src="https://via.placeholder.com/150.jpg" />
+                    <h4>Lesson Title</h4>
+                </a>
+            </div>
+            <div class="path-wrap">
+                <a href="/">
+                    <img src="https://via.placeholder.com/75.jpg" />
+                    <h5>Grit</h5>
+                    <h4>Path Name</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                </a>
+            </div>
+            <div class="video-wrap">
+                <a href="/">
+                    <img src="https://via.placeholder.com/300x200.jpg" />
+                    <h4>Video Title</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="page-content" class=" container-fluid">
         <div class="row">
             <div id="region-main" class="<?php echo $themerenderer->main_content_classes(); ?>">
                 <?php echo $themerenderer->course_content_header(); ?>
@@ -96,11 +127,9 @@ echo $totara_core_renderer->masthead($hasguestlangmenu, $nocustommenu);
                 <?php echo $themerenderer->course_content_footer(); ?>
             </div>
             <?php echo $themerenderer->blocks_pre(); ?>
-            <?php echo $themerenderer->blocks_post(); ?>
         </div>
-        <?php echo $themerenderer->blocks_bottom(); ?>
-
     </div>
+
 </div>
 
 <!-- Footer -->

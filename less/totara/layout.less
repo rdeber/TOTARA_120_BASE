@@ -21,14 +21,9 @@
 // @author    Joby Harding <joby.harding@totaralearning.com>
 // @package   theme_themebase
 //
-// Additional modules and Totara-specific variable overrides.
 
 
-// Handle show/hide of welcome block based on login.
-.welcome-back-block {
-    display: block;
-
-    .notloggedin & {
-        display: none;
-    }
+#page {
+    // Push content down to accommodate fixed navbar.
+    padding-top: 55px;
 }

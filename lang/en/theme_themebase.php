@@ -31,3 +31,10 @@ $string['choosereadme'] = '
         <p>Created by <a href="http://www.ryandeberardinis.com">Ryan DeBerardinis</a> for <a href="http://www.remote-learner.net">Remote-Learner</a></p>
     </div>
 </div>';
+
+$string['logoalt'] = 'Indeed Academy Logo';
+
+$string['pillar-link-one'] = 'Grit';
+$string['pillar-link-two'] = 'Authenticity';
+$string['pillar-link-three'] = 'Business Acumen';
+$string['pillar-link-four'] = 'Another Pillar';

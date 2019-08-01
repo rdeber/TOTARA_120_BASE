@@ -50,12 +50,7 @@ echo $OUTPUT->doctype() ?>
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
 <!-- Main navigation -->
-<?php
-$totara_core_renderer = $PAGE->get_renderer('totara_core');
-$hasguestlangmenu = (!isset($PAGE->layout_options['langmenu']) || $PAGE->layout_options['langmenu'] );
-$nocustommenu = !empty($PAGE->layout_options['nocustommenu']);
-echo $totara_core_renderer->masthead($hasguestlangmenu, $nocustommenu);
-?>
+<?php require("{$CFG->dirroot}/theme/themebase/layout/partials/header.php"); ?>
 
 <?php if ($full_header !== '') { ?>
 <!-- Breadcrumb and edit buttons -->

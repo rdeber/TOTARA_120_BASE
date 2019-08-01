@@ -21,14 +21,35 @@
 // @author    Joby Harding <joby.harding@totaralearning.com>
 // @package   theme_themebase
 //
-// Additional modules and Totara-specific variable overrides.
 
 
-// Handle show/hide of welcome block based on login.
-.welcome-back-block {
-    display: block;
+// Header navbar style.
+#totara-header-bar {
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    background: @brand-primary;
 
-    .notloggedin & {
-        display: none;
+    .container-fluid {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
+}
+
+// Header logo styles.
+#logo {
+    max-width: 200px;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+// Totara nav bar styles.
+.totaraNav {
+    margin-bottom: 0;
+}
+.totaraNav_prim {
+    background: transparent;
 }

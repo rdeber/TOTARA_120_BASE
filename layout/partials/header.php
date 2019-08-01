@@ -31,29 +31,35 @@ defined('MOODLE_INTERNAL') || die();
 
 global $OUTPUT;
 ?>
-<nav role="navigation" class="navbar navbar-default navbar-site
-">
-    <div class="container-fluid">
 
-        <div class="navbar-header pull-left">
-            <?php echo $themerenderer->render(new theme_roots\output\site_logo()); ?>
-        </div>
+    <header id="totara-header-bar" canvas="">
+        <div class="container-fluid">
 
-        <div class="navbar-header pull-right">
+            <div id="logo">
+                <a href="<?php echo $CFG->wwwroot;?>">
+                    <img src="<?php echo $OUTPUT->image_url('logo-1', 'theme'); ?>" alt="<?php echo get_string('logoalt', 'theme_themebase')?>" />
+                </a>
+            </div>
+
+            <div id="totara-menu-header">
+                <!-- Main navigation -->
+                <?php
+                $totara_core_renderer = $PAGE->get_renderer('totara_core');
+                $hasguestlangmenu = (!isset($PAGE->layout_options['langmenu']) || $PAGE->layout_options['langmenu'] );
+                $nocustommenu = !empty($PAGE->layout_options['nocustommenu']);
+                echo $totara_core_renderer->masthead($hasguestlangmenu, $nocustommenu);
+                ?>
+            </div>
+
             <?php
-                if ($hastotaramenu) {
-                    echo $OUTPUT->navbar_button();
-                    echo $OUTPUT->search_box();
-                }
-
-                echo $OUTPUT->navbar_plugin_output();
-
                 // Add profile menu (for logged in) or language menu (not logged in).
                 $haslangmenu = (!isset($PAGE->layout_options['langmenu']) || $PAGE->layout_options['langmenu'] );
                 echo ($haslangmenu && (!isloggedin() || isguestuser()) ? $OUTPUT->lang_menu() : '') . $OUTPUT->user_menu();
             ?>
-        </div>
 
-    </div>
-    <?php if ($hastotaramenu) { echo $totaramenu; } ?>
-</nav>
+            <div id="quick-access-menu">
+                <?php echo $totara_core_renderer->quick_access_menu_render(); ?>
+            </div>
+
+        </div>
+    </header>

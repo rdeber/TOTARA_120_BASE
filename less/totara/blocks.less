@@ -21,14 +21,20 @@
 // @author    Joby Harding <joby.harding@totaralearning.com>
 // @package   theme_themebase
 //
-// Additional modules and Totara-specific variable overrides.
 
 
-// Handle show/hide of welcome block based on login.
-.welcome-back-block {
-    display: block;
-
-    .notloggedin & {
-        display: none;
+// Add border to block region when editing.
+.block-region {
+    position: relative;
+    
+    .editing &:after {
+        content: "";
+        border: 2px dotted #c7c7c7;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
     }
 }
