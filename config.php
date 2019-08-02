@@ -82,8 +82,8 @@ $THEME->layouts = array(
     // The site home page.
     'frontpage' => array(
         'file' => 'frontpage.php',
-        'regions' => array('frontpage-one', 'frontpage-two', 'side-pre'),
-        'defaultregion' => 'side-pre',
+        'regions' => array('welcome-block', 'public-block', 'mom-block', 'admin-block'),
+        'defaultregion' => 'admin-block',
     ),
     // Server administration scripts.
     'admin' => array(

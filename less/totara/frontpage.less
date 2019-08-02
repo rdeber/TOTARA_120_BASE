@@ -21,14 +21,77 @@
 // @author    Joby Harding <joby.harding@totaralearning.com>
 // @package   theme_themebase
 //
-// Additional modules and Totara-specific variable overrides.
 
 
-// Handle show/hide of welcome block based on login.
-.welcome-back-block {
+// Base styles for page sections.
+.pagelayout-frontpage section:not(:first-of-type) {
+    padding: 1rem;
+
+    @media (min-width: @screen-md-min) {
+        padding: 5rem;
+    }
+}
+
+// Show/hide blocks based on login.
+.data-block,
+.welcome-block {
     display: block;
 
     .notloggedin & {
         display: none;
+    }
+}
+
+.data-block {
+    background: @gray-lighter;
+    padding: 1rem;
+
+    .container-fluid {
+        display: flex;
+        align-items: center;
+    }
+
+    a {
+        margin-left: auto;
+    }
+}
+
+.public-block {
+
+}
+
+.mom-block {
+    background: @gray-lighter;
+
+    .row {
+        margin-bottom: 2rem;
+    }
+}
+
+.video-wrap {
+    img {
+        width: 100%;
+    }
+}
+
+.pillar-nav {
+    background: @gray-lighter;
+    padding: 3rem 0;
+}
+
+
+// Maybe move this to general ui scss...
+.list-group-item {
+    display: flex;
+
+    i {
+        font-size: 5rem;
+    }
+
+    @media (min-width: @screen-md-min) {
+        img,
+        i {
+            margin-right: 1rem;
+        }
     }
 }

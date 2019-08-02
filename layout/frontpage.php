@@ -55,78 +55,227 @@ echo $OUTPUT->doctype() ?>
 <!-- Content -->
 <div id="page">
 
-    <section class="welcome-back-block">
-        <?php echo $OUTPUT->blocks('frontpage-one', ''); ?>
-        <div>
-            <h1>Welcome back Samantha!</h1>
-            <h2>Continue this lesson:</h2>
-            <a href="/"><img src="https://via.placeholder.com/300x200.jpg?text=This+is+a+previous+lesson" /></a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <!-- Data point block -->
+    <section class="data-block">
+        <div class="container-fluid">
+            <div>
+                <h5>Your Path</h5>
+                <h4>15 Lessons Completed</h4>
+            </div>
+            <a href="/totara/dashboard/index.php">Dashboard <i class="fa fa-arrow-right"></i></a>
         </div>
     </section>
 
-    <ul class="nav nav-tabs">
-        <li role="presentation"><a href="#"><?php echo get_string('pillar-link-one', 'theme_themebase')?></a></li>
-        <li role="presentation"><a href="#"><?php echo get_string('pillar-link-two', 'theme_themebase')?></a></li>
-        <li role="presentation"><a href="#"><?php echo get_string('pillar-link-three', 'theme_themebase')?></a></li>
-        <li role="presentation"><a href="#"><?php echo get_string('pillar-link-four', 'theme_themebase')?></a></li>
-    </ul>
-
+    <!-- Welcome back block (only visible when logged in) -->
     <section class="welcome-block">
-        <?php echo $OUTPUT->blocks('frontpage-two', ''); ?>
-        <div>
-            <h2>Secondary descriptive text here</h2>
-            <h1>This is an HTML block</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="/"><img src="https://via.placeholder.com/300x200.jpg?text=This+is+a+single+lesson" /></a>
+
+        <div class="container-fluid">
+            <h1>Welcome back Samantha!</h1>
+            <h2>Continue this path:</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="/"><img src="https://via.placeholder.com/500x300.jpg?text=This+is+your+previous+lesson" /></a>
+                </div>
+                <div class="col-md-6">
+                    <h3>Path/Lesson Title Here</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="/" class="btn btn-primary">View Path <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
         </div>
+
+        <?php echo $OUTPUT->blocks('welcome-block', ''); ?>
+
     </section>
 
+    <!-- Navigation to pillar pages -->
+    <nav class="pillar-nav">
+        <div class="container-fluid">
+            <ul class="nav nav-tabs">
+                <li role="presentation">
+                    <a href="<?php echo get_string('pillar-link-one-url', 'theme_themebase')?>">
+                        <?php echo get_string('pillar-link-one-text', 'theme_themebase')?>
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="<?php echo get_string('pillar-link-two-url', 'theme_themebase')?>">
+                        <?php echo get_string('pillar-link-two-text', 'theme_themebase')?>
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="<?php echo get_string('pillar-link-three-url', 'theme_themebase')?>">
+                        <?php echo get_string('pillar-link-three-text', 'theme_themebase')?>
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="<?php echo get_string('pillar-link-four-url', 'theme_themebase')?>">
+                        <?php echo get_string('pillar-link-four-text', 'theme_themebase')?>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Public welcome block -->
+    <section class="public-block">
+
+        <div class="public-message">
+            <div class="container-fluid">
+                <h1>Start Your Education</h1>
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</h2>
+                <a href="/"><img src="https://via.placeholder.com/500x300.jpg?text=This+is+a+featured+lesson" /></a>
+            </div>
+        </div>
+
+        <?php echo $OUTPUT->blocks('public-block', ''); ?>
+
+    </section>
+
+    <!-- Things your mom likes block -->
     <section class="mom-block">
-        <?php echo $OUTPUT->blocks('frontpage-three', ''); ?>
-        <div>
+
+        <div class="container-fluid">
             <h2>Featured Collection</h2>
             <h1>Stuff your mom would want you to learn</h1>
             <h3>2 Lessons | 3 Articles</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <div class="lesson-wrap">
-                <a href="/">
-                    <img src="https://via.placeholder.com/150.jpg" />
-                    <h4>Lesson Title</h4>
-                </a>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="lesson-wrap">
+                                <a href="/">
+                                    <img src="https://via.placeholder.com/150.jpg" />
+                                    <h4>Lesson Title</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="lesson-wrap">
+                                <a href="/">
+                                    <img src="https://via.placeholder.com/150.jpg" />
+                                    <h4>Lesson Title</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="lesson-wrap">
-                <a href="/">
-                    <img src="https://via.placeholder.com/150.jpg" />
-                    <h4>Lesson Title</h4>
-                </a>
+
+            <div class="row">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="/">
+                            <img class="media-object" src="https://via.placeholder.com/75.jpg" alt="test">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Lesson Title</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
             </div>
-            <div class="path-wrap">
+
+            <div class="row video-wrap">
                 <a href="/">
-                    <img src="https://via.placeholder.com/75.jpg" />
-                    <h5>Grit</h5>
-                    <h4>Path Name</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                </a>
-            </div>
-            <div class="video-wrap">
-                <a href="/">
-                    <img src="https://via.placeholder.com/300x200.jpg" />
+                    <img src="https://via.placeholder.com/500x300.jpg" />
                     <h4>Video Title</h4>
+                </a>
+            </div>
+
+        </div>
+
+        <?php echo $OUTPUT->blocks('mom-block', ''); ?>
+
+    </section>
+
+    <!-- Popular lessons block -->
+    <section class="popular-block">
+        <div class="container-fluid">
+            <h1>Popular Lessons</h1>
+            <div class="list-group">
+                <a href="/" class="list-group-item">
+                    <img src="https://via.placeholder.com/80x60" />
+                    <div>
+                        <h3 class="list-group-item-heading">Lesson Title</h3>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>    
+                </a>
+                <a href="/" class="list-group-item">
+                    <img src="https://via.placeholder.com/80x60" />
+                    <div>
+                        <h3 class="list-group-item-heading">Lesson Title</h3>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>    
+                </a>
+                <a href="/" class="list-group-item">
+                    <img src="https://via.placeholder.com/80x60" />
+                    <div>
+                        <h3 class="list-group-item-heading">Lesson Title</h3>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>    
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- Upcoming events block -->
+    <section class="events-block">
+        <div class="container-fluid">
+            <h1>Upcoming Events</h1>
+            <div class="list-group">
+                <a href="/" class="list-group-item">
+                    <i class="fa fa-calendar"></i>
+                    <div>
+                        <h3 class="list-group-item-heading">Event Title</h3>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>    
+                </a>
+                <a href="/" class="list-group-item">
+                    <i class="fa fa-calendar"></i>
+                    <div>
+                        <h3 class="list-group-item-heading">Event Title</h3>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>    
+                </a>
+                <a href="/" class="list-group-item">
+                    <i class="fa fa-calendar"></i>
+                    <div>
+                        <h3 class="list-group-item-heading">Event Title</h3>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>    
+                </a>
+                <a href="/" class="list-group-item">
+                    <i class="fa fa-calendar"></i>
+                    <div>
+                        <h3 class="list-group-item-heading">Event Title</h3>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>    
+                </a>
+                <a href="/" class="list-group-item">
+                    <i class="fa fa-calendar"></i>
+                    <div>
+                        <h3 class="list-group-item-heading">Event Title</h3>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>    
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Standard page content -->
     <div id="page-content" class=" container-fluid">
         <div class="row">
             <div id="region-main" class="<?php echo $themerenderer->main_content_classes(); ?>">
+                <?php echo $OUTPUT->blocks('admin-block', ''); ?>
                 <?php echo $themerenderer->course_content_header(); ?>
                 <?php echo $themerenderer->main_content(); ?>
                 <?php echo $themerenderer->blocks_main(); ?>
                 <?php echo $themerenderer->course_content_footer(); ?>
             </div>
-            <?php echo $themerenderer->blocks_pre(); ?>
         </div>
     </div>
 

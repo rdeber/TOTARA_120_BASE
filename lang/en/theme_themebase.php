@@ -34,7 +34,12 @@ $string['choosereadme'] = '
 
 $string['logoalt'] = 'Indeed Academy Logo';
 
-$string['pillar-link-one'] = 'Grit';
-$string['pillar-link-two'] = 'Authenticity';
-$string['pillar-link-three'] = 'Business Acumen';
-$string['pillar-link-four'] = 'Another Pillar';
+// Pillar navigation.
+$string['pillar-link-one-text'] = 'Grit';
+$string['pillar-link-one-url'] = '/';
+$string['pillar-link-two-text'] = 'Authenticity';
+$string['pillar-link-two-url'] = '/';
+$string['pillar-link-three-text'] = 'Business Acumen';
+$string['pillar-link-three-url'] = '/';
+$string['pillar-link-four-text'] = 'Another Pillar';
+$string['pillar-link-four-url'] = '/';

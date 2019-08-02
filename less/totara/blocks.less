@@ -23,13 +23,13 @@
 //
 
 
-// Add border to block region when editing.
 .block-region {
     position: relative;
     
+    // Add border to block region when editing.
     .editing &:after {
         content: "";
-        border: 2px dotted #c7c7c7;
+        border: 2px dotted #aaa;
         height: 100%;
         left: 0;
         position: absolute;
@@ -37,4 +37,9 @@
         width: 100%;
         z-index: -1;
     }
+}
+
+.block_addblock {
+    background: transparent;
+    margin: 1rem auto;
 }
