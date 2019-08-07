@@ -47,6 +47,11 @@ $THEME->resolvefaviconcallback = 'theme_themebase_resolve_favicon';
 
 
 $THEME->layouts = array(
+    'pillar' => array(
+        'file' => 'pillar.php',
+        'regions' => array('top', 'bottom', 'side-pre', 'side-post'),
+        'defaultregion' => 'side-pre',
+    ),
     // Most backwards compatible layout with blocks on the left - this is the layout used by default in Totara,
     // it is also the fallback when page layout is set too late when initialising page.
     // Standard Moodle themes have base layout without blocks.
@@ -82,7 +87,7 @@ $THEME->layouts = array(
     // The site home page.
     'frontpage' => array(
         'file' => 'frontpage.php',
-        'regions' => array('welcome-block', 'public-block', 'mom-block', 'admin-block'),
+        'regions' => array('datapoint-block', 'welcome-block', 'public-block', 'mom-block', 'admin-block'),
         'defaultregion' => 'admin-block',
     ),
     // Server administration scripts.
@@ -105,7 +110,7 @@ $THEME->layouts = array(
     // It is used by Totara dashboards.
     'dashboard' => array(
         'file' => 'dashboard.php',
-        'regions' => array('top', 'bottom', 'main', 'side-pre', 'side-post'),
+        'regions' => array('datapoint-block', 'top', 'bottom', 'main', 'side-pre', 'side-post'),
         'defaultregion' => 'main',
         'options' => array('langmenu' => true),
     ),

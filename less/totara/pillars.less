@@ -23,10 +23,56 @@
 //
 
 
-// Push content down to accommodate fixed navbar.
-.pagelayout-frontpage #page {
-    padding-top: 36px;
+// Base styles for page sections.
+#page-pillar-index section:not(:first-of-type) {
+    padding: 1rem;
+
+    @media (min-width: @screen-md-min) {
+        padding: 5rem;
+    }
+
+    img {
+        max-width: 100%;
+    }
 }
-.breadcrumb-container {
-    padding-top: 36px;
+
+.data-block {
+    background: @gray-lighter;
+    padding: 1rem;
+
+    .container-fluid {
+        display: flex;
+        align-items: center;
+    }
+
+    a {
+        margin-left: auto;
+    }
+}
+
+.pillar-block-two {
+    background: @gray-lighter;
+}
+
+.pillar-paths {
+}
+
+.pillar-lessons {
+    background: @gray-lighter;
+    
+    // Customize panel group display for this pillar section.
+    .panel-group {
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        .panel {
+            flex: 1 0 50%;
+            align-items: center;
+            margin: 0;
+        }
+
+        .panel-body {
+            max-width: 100%;
+        }
+    }
 }

@@ -43,3 +43,161 @@
     background: transparent;
     margin: 1rem auto;
 }
+
+
+
+// Data point section.
+.datapoint-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: @gray-lighter;
+    padding: 1rem;
+    margin-top: 36px;
+
+    @media (min-width: @screen-md-min) {
+        padding: 2rem;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+.datapoint-number {
+    text-align: center;
+    h3{
+        font-size: 1.25rem;
+    }
+}
+.datapoint-progress {
+    width: 100%;
+
+    @media (min-width: @screen-md-min) {
+        width: auto;
+        margin-left: 2rem;
+    }
+}
+.datapoint-link {
+    @media (min-width: @screen-md-min) {
+        margin-left: 3rem;
+    }
+}
+
+
+// Welcome back section.
+.welcomeback-section {
+    background-color: tint(@gray-lighter, 40%);
+    padding: 1rem;
+
+    @media (min-width: @screen-md-min) {
+        padding: 5rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.welcomeback-message {
+
+    // Show/hide message circle graph.
+    .col-md-4 {
+        display: none;
+        @media (min-width: @screen-md-min) {
+            display: block;
+        }
+    }
+}
+
+.welcomeback-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: @screen-md-min) {
+        top: 125px;
+        position: relative;
+    }
+
+    // General panel styles.
+    .panel {
+        flex: 1 0 50%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    // Right panel styles.
+    .panel:first-of-type {
+        background: #ddd;
+    }
+
+    // Left panel styles.
+    .panel:last-of-type {
+        background: #ccc;
+    }
+}
+
+
+// Badges section.
+.badges-section {
+    padding: 1rem;
+
+    @media (min-width: @screen-md-min) {
+        padding: 5rem;
+
+        // Hide see more badges link on desktop.
+        .see-more-link {
+            display: none;
+        }
+    }
+
+    .badges-achieved {
+        // Hide achieved badges title on mobile.
+        h3 {
+            display: none;
+        }
+
+        @media (min-width: @screen-md-min) {
+            // Show achieved badges title on mobile.
+            h2 {
+                display: block;
+            }
+        }
+    }
+
+    .badges-inprogress {
+        // Hide in progress badges on mobile.
+        display: none;
+
+        @media (min-width: @screen-md-min) {
+            // Show in progress badges on desktop.
+            display: block;
+        }
+    }
+
+    .badges-wrap {
+        display: flex;
+    }
+
+    .badge-element {
+        text-align: center;
+
+        & + .badge-element {
+            margin-left: 1rem;
+        }
+    }
+}
+
+
+// Pillars section.
+.pillar-progress-section {
+    padding: 1rem;
+
+    @media (min-width: @screen-md-min) {
+        padding: 5rem;
+
+        // Hide see more badges link on desktop.
+        .see-more-link {
+            display: none;
+        }
+    }
+
+    .panel {
+        background: @gray;
+    }
+}

@@ -1,0 +1,98 @@
+//
+// This file is part of Totara LMS
+//
+// Copyright (C) 2016 onwards Totara Learning Solutions LTD
+//
+// This program is free software; you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation; either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <ht    tp://www.gnu.org/licenses/>.
+//
+// @copyright 2016 onwards Totara Learning Solutions LTD
+// @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+// @author    Joby Harding <joby.harding@totaralearning.com>
+// @package   theme_themebase
+//
+
+
+// Make panel links block elements.
+a.panel {
+    display: inline-block;
+}
+
+// Custom panel group component.
+.panel-group {
+    display: flex;
+    flex-direction: column;
+
+    // Flex panels to fill available space.
+    .panel {
+        display: flex;
+        
+        // Remove default padding on sibling panels.
+        & + .panel {
+            margin: 0;
+        }
+    }
+
+    // Set max-width to keep images small on mobile.
+    .panel-body {
+        max-width: 150px;
+    }
+
+    // Make panel footer expand full width and flex content.
+    .panel-footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    // Adjust panel group layout for larger screens.
+    @media (min-width: @screen-md-min) {
+        flex-direction: row;
+
+        .panel {
+            flex-direction: column;
+        }
+
+        .panel + .panel {
+            margin-left: 2%;
+        }
+
+        .panel-body {
+            max-width: 100%;
+        }
+    }
+
+    // Custom display for events block.
+    .events-block & {
+        p {
+            display: none;
+        }
+
+        @media (min-width: @screen-md-min) {
+            p {
+                display: block;
+            }
+        }
+    }
+}
+
+// Custom horizontal panel styles.
+.panel-horizontal {
+    .panel-body {
+        display: flex;
+        img {
+            margin-right: 1rem;
+        }
+    }
+}

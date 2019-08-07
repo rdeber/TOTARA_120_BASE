@@ -34,12 +34,15 @@ $string['choosereadme'] = '
 
 $string['logoalt'] = 'Indeed Academy Logo';
 
+
+$string['datapoint-block'] = 'Data point block region';
+
 // Pillar navigation.
 $string['pillar-link-one-text'] = 'Grit';
-$string['pillar-link-one-url'] = '/';
+$string['pillar-link-one-url'] = '/theme/themebase/pillar.php';
 $string['pillar-link-two-text'] = 'Authenticity';
-$string['pillar-link-two-url'] = '/';
+$string['pillar-link-two-url'] = '/theme/themebase/pillar.php';
 $string['pillar-link-three-text'] = 'Business Acumen';
-$string['pillar-link-three-url'] = '/';
+$string['pillar-link-three-url'] = '/theme/themebase/pillar.php';
 $string['pillar-link-four-text'] = 'Another Pillar';
-$string['pillar-link-four-url'] = '/';
+$string['pillar-link-four-url'] = '/theme/themebase/pillar.php';

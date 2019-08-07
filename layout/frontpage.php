@@ -66,7 +66,7 @@ echo $OUTPUT->doctype() ?>
         </div>
     </section>
 
-    <!-- Welcome back block (only visible when logged in) -->
+    <!-- Welcome back block -->
     <section class="welcome-block">
 
         <div class="container-fluid">
@@ -74,10 +74,17 @@ echo $OUTPUT->doctype() ?>
             <h2>Continue this path:</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <a href="/"><img src="https://via.placeholder.com/500x300.jpg?text=This+is+your+previous+lesson" /></a>
+                    <a class="panel panel-default" href="/">
+                        <div class="panel-body">
+                            <img src="https://via.placeholder.com/500x300.jpg" />
+                        </div>
+                        <div class="panel-footer">
+                            Path Title
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-6">
-                    <h3>Path/Lesson Title Here</h3>
+                    <h3>Path Title Here</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <a href="/" class="btn btn-primary">View Path <i class="fa fa-arrow-right"></i></a>
                 </div>
@@ -123,7 +130,14 @@ echo $OUTPUT->doctype() ?>
             <div class="container-fluid">
                 <h1>Start Your Education</h1>
                 <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</h2>
-                <a href="/"><img src="https://via.placeholder.com/500x300.jpg?text=This+is+a+featured+lesson" /></a>
+                <a class="panel panel-default" href="/">
+                    <div class="panel-body">
+                        <img src="https://via.placeholder.com/500x300.jpg" />
+                    </div>
+                    <div class="panel-footer">
+                        Lesson Title
+                    </div>
+                </a>
             </div>
         </div>
 
@@ -142,48 +156,69 @@ echo $OUTPUT->doctype() ?>
             <div class="row">
                 <div class="col-md-6">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-xs-6">
-                            <div class="lesson-wrap">
-                                <a href="/">
-                                    <img src="https://via.placeholder.com/150.jpg" />
-                                    <h4>Lesson Title</h4>
-                                </a>
-                            </div>
+                            <a class="panel panel-default" href="/">
+                                <div class="panel-body">
+                                    <img src="https://via.placeholder.com/500.jpg" />
+                                </div>
+                                <div class="panel-footer">
+                                    Lesson Title
+                                </div>
+                            </a>
                         </div>
                         <div class="col-xs-6">
-                            <div class="lesson-wrap">
-                                <a href="/">
-                                    <img src="https://via.placeholder.com/150.jpg" />
-                                    <h4>Lesson Title</h4>
-                                </a>
-                            </div>
+                            <a class="panel panel-default" href="/">
+                                <div class="panel-body">
+                                    <img src="https://via.placeholder.com/500.jpg" />
+                                </div>
+                                <div class="panel-footer">
+                                    Lesson Title
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="media">
-                    <div class="media-left">
-                        <a href="/">
-                            <img class="media-object" src="https://via.placeholder.com/75.jpg" alt="test">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">Lesson Title</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
+                <div class="col-xs-12">
+                    <a class="panel panel-default panel-horizontal" href="/">
+                        <div class="panel-body">
+                            <img src="https://via.placeholder.com/75.jpg" />
+                            <div>
+                                <h3 class="panel-title">Lesson Title</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
 
             <div class="row video-wrap">
-                <a href="/">
-                    <img src="https://via.placeholder.com/500x300.jpg" />
-                    <h4>Video Title</h4>
-                </a>
+                <div class="col-xs-6">
+                    <a class="panel panel-default" href="/">
+                        <div class="panel-body">
+                            <img src="https://via.placeholder.com/800x600.jpg" />
+                        </div>
+                        <div class="panel-footer">
+                            Video Title
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-6">
+                    <a class="panel panel-default" href="/">
+                        <div class="panel-body">
+                            <img src="https://via.placeholder.com/800x600.jpg" />
+                        </div>
+                        <div class="panel-footer">
+                            Video Title
+                        </div>
+                    </a>
+                </div>
             </div>
 
         </div>
@@ -196,27 +231,51 @@ echo $OUTPUT->doctype() ?>
     <section class="popular-block">
         <div class="container-fluid">
             <h1>Popular Lessons</h1>
-            <div class="list-group">
-                <a href="/" class="list-group-item">
-                    <img src="https://via.placeholder.com/80x60" />
-                    <div>
+            <div class="panel-group">
+                <a class="panel panel-default" href="/">
+                    <div class="panel-body">
+                        <img src="https://via.placeholder.com/500x300.jpg" />
+                    </div>
+                    <div class="panel-footer">
                         <h3 class="list-group-item-heading">Lesson Title</h3>
                         <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    </div>    
+                    </div>
                 </a>
-                <a href="/" class="list-group-item">
-                    <img src="https://via.placeholder.com/80x60" />
-                    <div>
+                <a class="panel panel-default" href="/">
+                    <div class="panel-body">
+                        <img src="https://via.placeholder.com/500x300.jpg" />
+                    </div>
+                    <div class="panel-footer">
                         <h3 class="list-group-item-heading">Lesson Title</h3>
                         <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    </div>    
+                    </div>
                 </a>
-                <a href="/" class="list-group-item">
-                    <img src="https://via.placeholder.com/80x60" />
-                    <div>
+                <a class="panel panel-default" href="/">
+                    <div class="panel-body">
+                        <img src="https://via.placeholder.com/500x300.jpg" />
+                    </div>
+                    <div class="panel-footer">
                         <h3 class="list-group-item-heading">Lesson Title</h3>
                         <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    </div>    
+                    </div>
+                </a>
+                <a class="panel panel-default" href="/">
+                    <div class="panel-body">
+                        <img src="https://via.placeholder.com/500x300.jpg" />
+                    </div>
+                    <div class="panel-footer">
+                        <h3 class="list-group-item-heading">Lesson Title</h3>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>
+                </a>
+                <a class="panel panel-default" href="/">
+                    <div class="panel-body">
+                        <img src="https://via.placeholder.com/500x300.jpg" />
+                    </div>
+                    <div class="panel-footer">
+                        <h3 class="list-group-item-heading">Lesson Title</h3>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>
                 </a>
             </div>
         </div>
@@ -226,41 +285,33 @@ echo $OUTPUT->doctype() ?>
     <section class="events-block">
         <div class="container-fluid">
             <h1>Upcoming Events</h1>
-            <div class="list-group">
-                <a href="/" class="list-group-item">
-                    <i class="fa fa-calendar"></i>
-                    <div>
-                        <h3 class="list-group-item-heading">Event Title</h3>
-                        <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    </div>    
+            <div class="panel-group">
+                <a class="panel panel-default" href="/">
+                    <div class="panel-body">
+                        <img src="https://via.placeholder.com/500.jpg" />
+                    </div>
+                    <div class="panel-footer">
+                        <h3>Upcoming Event Title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
                 </a>
-                <a href="/" class="list-group-item">
-                    <i class="fa fa-calendar"></i>
-                    <div>
-                        <h3 class="list-group-item-heading">Event Title</h3>
-                        <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    </div>    
+                <a class="panel panel-default" href="/">
+                    <div class="panel-body">
+                        <img src="https://via.placeholder.com/500.jpg" />
+                    </div>
+                    <div class="panel-footer">
+                        <h3>Upcoming Event Title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
                 </a>
-                <a href="/" class="list-group-item">
-                    <i class="fa fa-calendar"></i>
-                    <div>
-                        <h3 class="list-group-item-heading">Event Title</h3>
-                        <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    </div>    
-                </a>
-                <a href="/" class="list-group-item">
-                    <i class="fa fa-calendar"></i>
-                    <div>
-                        <h3 class="list-group-item-heading">Event Title</h3>
-                        <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    </div>    
-                </a>
-                <a href="/" class="list-group-item">
-                    <i class="fa fa-calendar"></i>
-                    <div>
-                        <h3 class="list-group-item-heading">Event Title</h3>
-                        <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    </div>    
+                <a class="panel panel-default" href="/">
+                    <div class="panel-body">
+                        <img src="https://via.placeholder.com/500.jpg" />
+                    </div>
+                    <div class="panel-footer">
+                        <h3>Upcoming Event Title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
                 </a>
             </div>
         </div>
